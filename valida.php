@@ -12,7 +12,7 @@
            
             $banco=new banco();
            
-            $banco->conectarBanco();
+            //$banco->conectarBanco();
        
             $login = $_POST['login'];      
             $senha = $_POST['senha'];

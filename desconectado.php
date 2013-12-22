@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Haras Jacuma</title>
+        <title>GuaraGas</title>
     </head>
    
     <body>
