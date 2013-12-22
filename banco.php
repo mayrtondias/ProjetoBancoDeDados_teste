@@ -9,6 +9,9 @@ class banco {
     public function conectarBanco() {
         $conexao = mysql_connect("localhost", "root", "123456");
         $conecta_banco = mysql_select_db("hj", $conexao);
+        if($conecta_banco==null){
+            echo "error no banco";
+        }
     }
 
     public function inserirPessoa($email, $nome, $cpf, $fone, $senha, $lote) {

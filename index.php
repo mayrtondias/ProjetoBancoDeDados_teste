@@ -16,7 +16,7 @@
                     Login:<br>
                     <input type="text" name="login"><br>
                     senha:<br>
-                    <input type="text" name="login"><br>
+                    <input type="password" name="senha"><br>
                     <input type="submit" value="Entrar">
                 </form>
             </div>
