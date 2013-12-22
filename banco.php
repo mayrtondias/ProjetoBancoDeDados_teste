@@ -7,7 +7,7 @@ class banco {
     }
 
     public function conectarBanco() {
-        $conexao = mysql_connect("localhost", "root", "120791");
+        $conexao = mysql_connect("localhost", "root", "123456");
         $conecta_banco = mysql_select_db("hj", $conexao);
     }
 
