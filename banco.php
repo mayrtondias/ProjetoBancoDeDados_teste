@@ -1,14 +1,21 @@
 <?php
 
+/*Essa e a classe responsavel pelas principais funcoes no bando de dados de 
+ * GuaraGas, oou seja aqui se encontra os metodos para conectar ao Banco,
+ * inserir, alterar e deletar elementos do Banco de Dados
+ */
+
 class banco {
     
+    //construtor da classe
     public function __construct() {
         $this->conectarBanco();
     }
-
+    
+    
     public function conectarBanco() {
         $conexao = mysql_connect("localhost", "root", "123456");
-        $conecta_banco = mysql_select_db("hj", $conexao);
+        $conecta_banco = mysql_select_db("GuaraGas", $conexao);
         if($conecta_banco==null){
             echo "error no banco";
         }
