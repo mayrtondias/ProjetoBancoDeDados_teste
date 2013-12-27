@@ -7,18 +7,27 @@
 
 class banco {
     
-    //construtor da classe
+    
     public function __construct() {
         $this->conectarBanco();
     }
-    
-    
+
     public function conectarBanco() {
-        $conexao = mysql_connect("localhost", "root", "123456");
-        $conecta_banco = mysql_select_db("GuaraGas", $conexao);
-        if($conecta_banco==null){
-            echo "error no banco";
-        }
+        
+        $servidor = "localhost";
+        $porta = 5432;
+        $bancoDeDados = "GuaraGas";
+        $usuario = "postgres";
+        $senha = "123456";
+
+        $conexao = pg_connect("host=$servidor port=$porta dbname=$bancoDeDados " +"user=$usuario password=$senha");
+        if(!$conexao) {
+            die("Não foi possível se conectar ao banco de dados.");
+        }//$conexao = pg_connectct("localhost", "postgres", "123456");
+        //$conecta_banco = mysql_select_db("hj", $conexao);
+        //if($conecta_banco==null){
+        //    echo "error no banco";
+        //}
     }
 
     public function inserirPessoa($email, $nome, $cpf, $fone, $senha, $lote) {
