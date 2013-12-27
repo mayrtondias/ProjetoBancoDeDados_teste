@@ -6,14 +6,15 @@
     <body>
         <?php
                  
-            require 'banco.php';
+            
+        require 'banco.php';
            
             session_start();
            
             $banco=new banco();
            
             //$banco->conectarBanco();
-       
+            /*
             $login = $_POST['login'];      
             $senha = $_POST['senha'];
            
@@ -73,7 +74,7 @@
                 $_SESSION['senha']="erro";
                 header('location: indexErro.php');
             }
-           
+           */
          ?>
     </body>
 </html>
