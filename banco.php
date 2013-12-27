@@ -7,7 +7,6 @@
 
 class banco {
     
-    
     public function __construct() {
         $this->conectarBanco();
     }
@@ -23,14 +22,10 @@ class banco {
         $conexao = pg_connect("host=$servidor port=$porta dbname=$bancoDeDados " +"user=$usuario password=$senha");
         if(!$conexao) {
             die("Não foi possível se conectar ao banco de dados.");
-        }//$conexao = pg_connectct("localhost", "postgres", "123456");
-        //$conecta_banco = mysql_select_db("hj", $conexao);
-        //if($conecta_banco==null){
-        //    echo "error no banco";
-        //}
+        }
     }
 
-    public function inserirPessoa($email, $nome, $cpf, $fone, $senha, $lote) {
+    /*public function inserirPessoa($email, $nome, $cpf, $fone, $senha, $lote) {
 
         $sql_insert = "insert into pessoa (email,nome,cpf,fone,senha,lote) values ('" . $email . "','" . $nome . "','" . $cpf . "','" . $fone . "','" . $senha . "','" . $lote . "')";
         return mysql_query($sql_insert);
@@ -182,7 +177,7 @@ class banco {
             }
         }
         return "";
-    }
+    }*/
 
 }
 
