@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Haras Jacuma</title>
+        <title>GuaraGas</title>
     </head>
    
     <body>
