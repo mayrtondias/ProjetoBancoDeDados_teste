@@ -15,16 +15,40 @@ class banco {
         
         $servidor = "localhost";
         $porta = 5432;
+        $bancoDeDados = "hsegura_tutorial";
+        $usuario = "hsegura_gerente";
+        $senha = "123456";
+
+        $conexao = pg_connect("host=$servidor port=$porta dbname=$bancoDeDados " +
+                                     "user=$usuario password=$senha");
+     if(!$conexao) {
+         die("Não foi possível se conectar ao banco de dados.");
+     }
+        
+        /*$servidor = "localhost";
+        $porta = 5432;
         $bancoDeDados = "guaragas";
         $usuario = "postgres";
         $senha = "123";
 
         $conexao = pg_connect("host=$servidor port=$porta dbname=$bancoDeDados " +"user=$usuario password=$senha");
-        if(!$conexao) {
-            die("Não foi possível se conectar ao banco de dados.");
+        
+        if($conexao==null) {
+            die("Nao foi possível se conectar ao banco de dados.");
         }
+        
+        $servidor = "localhost";
+        $usuario = "postgres";
+        $senha ="123";
+        $conexao = pg_connect($servidor, $usuario, $senha);
+        if($conexao==NULL){
+            echo "nao";
+        }
+        //$conexao = pg_connect($servidor, $usuario, $senha) or die ("erro doidderia");
+        echo "Conexão efetuada com sucesso!!";
+        */
     }
-
+    
     /*public function inserirPessoa($email, $nome, $cpf, $fone, $senha, $lote) {
 
         $sql_insert = "insert into pessoa (email,nome,cpf,fone,senha,lote) values ('" . $email . "','" . $nome . "','" . $cpf . "','" . $fone . "','" . $senha . "','" . $lote . "')";

@@ -5,13 +5,25 @@
    
     <body>
         <?php
-                 
             
-        require 'banco.php';
+     $servidor = "localhost";
+     $porta = 5432;
+     $bancoDeDados = "guaragas";
+     $usuario = "postgres";
+     $senha = "123";
+
+     $conexao = pg_connect("host=$servidor port=$porta dbname=$bancoDeDados " +
+                                     "user=$usuario password=$senha");
+     if(!$conexao) {
+         die("Não foi possível se conectar ao banco de dados.");
+     }
+    
+            
+            //require 'banco.php';
            
-            session_start();
+            //session_start();
            
-            $banco=new banco();
+            //$banco=new banco();
            
             //$banco->conectarBanco();
             /*
