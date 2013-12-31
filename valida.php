@@ -6,7 +6,7 @@
     <body>
         <?php
             
-     $servidor = "localhost";
+     $servidor = "PostgreSQL";
      $porta = 5432;
      $bancoDeDados = "guaragas";
      $usuario = "postgres";
@@ -14,8 +14,11 @@
 
      $conexao = pg_connect("host=$servidor port=$porta dbname=$bancoDeDados " +
                                      "user=$usuario password=$senha");
+     echo $conexao;
      if(!$conexao) {
-         die("Não foi possível se conectar ao banco de dados.");
+         die("mininoooooooooo");
+     }else{
+         echo"serio?";
      }
     
             
