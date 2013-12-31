@@ -24,7 +24,7 @@ ALTER TABLE administrador
 
 CREATE TABLE cliente
 (
-  nome character varying(30) NOT NULL,
+  nome character varying(50) NOT NULL,
   contato character varying(14) NOT NULL,
   rua character varying(50) NOT NULL,
   bairro character varying(25) NOT NULL,
