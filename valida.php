@@ -6,21 +6,23 @@
     <body>
         <?php
             
-     $servidor = "PostgreSQL";
-     $porta = 5432;
-     $bancoDeDados = "guaragas";
-     $usuario = "postgres";
-     $senha = "123";
-
-     $conexao = pg_connect("host=$servidor port=$porta dbname=$bancoDeDados " +
-                                     "user=$usuario password=$senha");
-     echo $conexao;
-     if(!$conexao) {
-         die("mininoooooooooo");
-     }else{
-         echo"serio?";
-     }
-    
+     include("conexao.class.php");
+echo "1 ";
+#instanciando o objeto
+$minhaConexao = new Conexao();
+echo "2 ";
+#chamada ao metodo open que abra a conexao
+$minhaConexao->open();
+echo "3 ";
+#verificando o status da conexao
+$minhaConexao->statusCon();
+echo "4 ";
+#encerrando a conexao
+$minhaConexao->close();
+echo "5 ";
+#verificando a conexao apos close();
+$minhaConexao->statusCon();
+    echo "6 ";
             
             //require 'banco.php';
            
