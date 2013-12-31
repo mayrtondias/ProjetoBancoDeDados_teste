@@ -1,4 +1,4 @@
-ProjetoBancoDeDados_GuaraGas
+ProjetoBancoDeDados_Teste
 ============================
 
 Projeto da disciplina Banco de Dados
